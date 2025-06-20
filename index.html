@@ -3,25 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <title>NOVUSCOM Brochure</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <style>
     html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      width: 100%;
-      overflow: hidden;
-      background: #e0f7fa;
+      margin: 0; padding: 0;
+      height: 100%; width: 100%;
+      overflow: hidden; background: #e0f7fa;
     }
-    embed {
+    object {
       display: block;
-      width: 100vw;
-      height: 100vh;
+      width: 100vw; height: 100vh;
       border: none;
+    }
+    /* fallback message styling */
+    .fallback {
+      font-family: sans-serif;
+      text-align: center;
+      padding: 2rem;
     }
   </style>
 </head>
 <body>
-  <embed src="novuscom-brochure.pdf" type="application/pdf" />
+  <object data="novuscom-brochure.pdf" type="application/pdf">
+    <div class="fallback">
+      <p>Your browser can’t display PDFs inline. <br>
+      <a href="novuscom-brochure.pdf" target="_blank">
+        Click here to download the brochure
+      </a>.</p>
+    </div>
+  </object>
 </body>
 </html>
